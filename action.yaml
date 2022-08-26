@@ -1,0 +1,16 @@
+name: 'Get AWS SSM Parameter'
+description: 'Getting the parameter value from SSM'
+inputs:
+  parameter-name:
+    description: 'Name of the Parameter'
+    required: true
+  aws-region:
+    description: 'AWS Region'
+    required: true
+    default: 'us-east-1'
+outputs:
+  value:
+    description: 'SSM Parameter value'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
